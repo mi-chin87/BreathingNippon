@@ -1,0 +1,23 @@
+	iro=255
+*kuri1
+	wait 2
+	pos 170,0
+	color 255,iro,iro
+	font "メイリオ",300,0
+	mes "●"
+	second=5
+	iro=iro-second
+	if iro>0:goto *kuri1
+	second=0
+	goto *kuri2
+*kuri2
+	wait 5
+	pos 170,0
+	color 255,iro,iro
+	font "メイリオ",300,0
+	mes "●"
+	second=10
+	iro=iro+second
+	if iro<250:goto *kuri2
+	iro=255
+	goto *kuri1
